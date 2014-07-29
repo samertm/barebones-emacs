@@ -39,6 +39,15 @@
 ;; You should do additional research if you want to only use tabs.
 (setq-default indent-tabs-mode nil)
 
+;; By default, Emacs will litter auto-save and backup files all over
+;; your file system. The following will place all auto-save and backup
+;; files in your temp directory (`/tmp' for linux, `C:\Temp' for
+;; windows).
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" . ,temporary-file-directory)))
+
 ;; When you try to make a non-reversable change to your system, Emacs
 ;; will give you a yes-or-no prompt, and you have to type out "yes"
 ;; or "no". Uncomment the next line to shorten this to "y" or "n".
