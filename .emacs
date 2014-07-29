@@ -48,6 +48,13 @@
 (setq auto-save-file-name-transforms
       `((".*" . ,temporary-file-directory)))
 
+;; By default, Emacs will move half a page when you move past the top
+;; of a buffer. Setting the `scroll-margin' to 4 means that it moves
+;; the buffer when you are 4 lines from the top or bottom, and
+;; `scroll-conservatively' makes Emacs move the buffer one line only.
+;(setq scroll-margin 4)
+;(setq scroll-conservatively 1)
+
 ;; When you try to make a non-reversable change to your system, Emacs
 ;; will give you a yes-or-no prompt, and you have to type out "yes"
 ;; or "no". Uncomment the next line to shorten this to "y" or "n".
