@@ -44,10 +44,10 @@
 ;; files in your temp directory (`/tmp' for linux, `C:\Temp' for
 ;; windows).
 ;; WARNING: I'm pretty sure this is broken right now.
-;(setq backup-directory-alist
-;      `((".*" . ,temporary-file-directory)))
-;(setq auto-save-file-name-transforms
-;      `((".*" . ,temporary-file-directory)))
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
 
 ;; By default, Emacs will move half a page when you move past the top
 ;; of a buffer. Setting the `scroll-margin' to 4 means that it moves
