@@ -43,10 +43,11 @@
 ;; your file system. The following will place all auto-save and backup
 ;; files in your temp directory (`/tmp' for linux, `C:\Temp' for
 ;; windows).
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq auto-save-file-name-transforms
-      `((".*" . ,temporary-file-directory)))
+;; WARNING: I'm pretty sure this is broken right now.
+;(setq backup-directory-alist
+;      `((".*" . ,temporary-file-directory)))
+;(setq auto-save-file-name-transforms
+;      `((".*" . ,temporary-file-directory)))
 
 ;; By default, Emacs will move half a page when you move past the top
 ;; of a buffer. Setting the `scroll-margin' to 4 means that it moves
