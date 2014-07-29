@@ -1,0 +1,34 @@
+;; This is a barebones Emacs config
+
+;; Uncomment these to remove the tool bar, menu bar, and scroll bar
+;(tool-bar-mode -1)
+;(menu-bar-mode -1)
+;(scroll-bar-mode -1)
+
+;; By default, Emacs only shows the line number.
+(column-number-mode 1)
+
+;; ido-mode gives you completion for `find-file' and `switch-buffer'.
+;; If you want completion for M-x as well, grab the package `smex'.
+(ido-mode 1)
+;; ido-everywhere will let you use ido-mode anywhere you interact
+;; with your file system, like with `save-buffer'.
+;(ido-everywhere 1)
+
+;; By default, Emacs mixes tabs and spaces. This turns off tabs, so
+;; Emacs will only use spaces, as Emacs usually handles that well.
+;; You should do additional research if you want to only use tabs.
+(setq-default indent-tabs-mode nil)
+
+;; When you try to make a non-reversable change to your system, Emacs
+;; will give you a yes-or-no prompt, and you have to type out "yes"
+;; or "no". Uncomment the next line to shorten this to "y" or "n".
+;(defalias 'yes-or-no-p 'y-or-n-p)
+
+;; Emacs does not show you the beginning of a paren by default.
+(setq show-paren-delay 0)
+(show-paren-mode 1)
+
+;; Emacs does not indent new lines by default.
+(electric-indent-mode 1)
+
